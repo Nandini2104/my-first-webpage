@@ -1,0 +1,446 @@
+<!Doctype.html>
+<html>
+<head>
+<style>
+div{
+		margin:50px;
+	}
+body {
+		font-family: Arial,Helvetica, sans-serif;
+		background-image:url(https://cdn.mos.cms.futurecdn.net/w4baqhMMrbP8DHR2TTj57P-1200-80.jpg);
+		background-size:100%;
+		scroll-behavior: smooth;
+		margin:0;
+		padding:0;
+	}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 5px;
+  display: inline-block;
+  border: none;
+  background: #3c3c3c;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 15px 20px;
+  margin:  0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  z-index: 1;
+  border-radius: 5px;
+  text-decoration : bold;
+}
+
+button:hover {
+  opacity:1;
+}
+/* Float signup button and add an equal width */
+.signupbtn {
+  float: center;
+  width: 100%;
+  margin: 0 0 5px 0;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto;/* Enable scroll if needed */
+  padding-top: 50px;
+  z-index:2;
+  background-color:rgba(0,0,0,0.8);
+   margin:0;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: rgba(0,0,0,0.8);
+  margin: 5% auto ; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .signupbtn {
+     width: 100%;
+  }
+}
+.su button{
+		width: auto;
+		text-decoration: bold;
+	}
+h1{
+	color : white;
+	font-size: 50px;
+	}
+.ll{
+		color:white;
+	}
+
+.division{
+			position: absolute;
+			left:20%;
+			z-index: 1;
+		}
+.division h1{
+				font-size:50px;
+				color:#fff;
+				text-align:center;
+				width:80% ;
+				margin:0;
+				flex-flow: wrap-reverse;
+				justify-content: center;
+	}
+.division p{
+				font-size: 30px;
+				color: #fff;
+				text-align: center;
+				margin: 0;
+				padding-right:150px;
+		}
+.back{
+		background:rgba(0, 0, 0, 0.8);
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:-1;
+		margin:0;
+	}
+.heading h1{
+			font-size:50px;
+			color:red;
+			top:8px;
+			position:absolute;
+			left:16px;
+		}
+.sec2{
+		background-size:cover;
+		color:white;
+		display: flex;
+		flex-direction: column;
+		background-color: gray;
+	}
+.sec2 div{
+			background-color: black;
+			width: 100%;
+			margin: 10px 10px 0 0;
+			color:white;
+		}
+.sec2 h2{
+			padding-top : 180px;
+			margin:30px;
+			font-size: 50px;
+		}
+.sec2 img{
+			width: 30%;
+			height: 40%;
+			position: absolute;
+			top : 120%;
+			right:100px;
+		}
+.sec2 p{
+			margin: 30px;
+			font-size:30px;
+			width: 45%;
+			padding-bottom:120px;
+		}
+
+.sec3{
+		color:white;
+		display:flex;
+		flex-direction: column;
+		background-color: gray;
+	}
+.sec3 div{
+			background-color: black;
+			width: 100%;
+			margin: 10px 10px 0 0;
+			color:white;
+		}
+.sec3 h2{
+			padding-top : 50px;
+			margin-left: 50% ;
+			font-size: 50px;
+			width:50%;
+			align-self: right;
+		}
+.sec3 p{
+			font-size:30px;
+			width: 45%;
+			padding-bottom:120px;
+			align-self: right;
+			margin-left:50%;
+			
+		}
+.sec3 img{
+			width: 30%;
+			height: 40%;
+			position: absolute;
+			top : 200%;
+			left:100px;
+		}				
+		
+.sec4{
+		background-size:cover;
+		color:white;
+		display: flex;
+		flex-direction: column;
+		background-color: gray;
+	}
+.sec4 div{
+			background-color: black;
+			width: 100%;
+			margin: 10px 10px 0 0;
+			color:white;
+		}
+.sec5{
+		
+		color:lightgray;
+		display:flex;
+		flex-direction: column;
+		background-color: gray;
+	}
+.sec5 div{
+			background-color: black;
+			width: 100%;
+			margin: 10px 10px 0 0;
+		}
+.sec5 p{
+			font-size:15px;
+			margin-left:20px;
+			margin-top:80px;
+		}
+.sec5 ul{
+			list-style:none;
+			display:flex;
+			width : 100%;
+			justify-content:justify;
+			margin-top: 50px;
+		}
+.sec5 a{
+			color:gray;
+			text-decoration:none;
+			margin-left:50px;
+		}	
+.sec1{
+		padding-bottom: 37.3%;
+	}	
+
+
+@media screen and (max-width:900px){
+	.division{
+				width:130%;
+				justify-content: center;
+				margin:0;
+			}
+	.division p{
+				font-size: 20px;
+				margin: 0;
+                width:50%;
+	            padding-right:10px;
+		}
+	.division h1{
+				font-size:30px;
+				width:50% ;
+				margin:0;
+	}
+	.back{
+				width:100%;
+			}
+  body{
+        width:100%;
+		background-size:100%;
+  }
+  .sec2 h2{
+			padding-top : 180px;
+			margin:30px;
+			font-size: 40px;
+            width:50%;
+		}
+  .sec2 img{
+			width: 30%;
+			height: 40%;
+			top : 120%;
+			right:50px;
+		}
+  .sec2 p{
+			font-size:30px;
+			width: 45%;
+			padding-bottom:100px;
+            padding-top: 0;
+		}
+  .sec3 h2{
+			margin-left: 50% ;
+			font-size: 40px;
+			width:50%;
+			align-self: right;
+		}
+  .sec3 p{
+			font-size:20px;
+			width: 45%;
+			padding-bottom:120px;
+			align-self: right;
+			margin-left:50%;
+			
+		}
+  .sec3 img{
+			width: 30%;
+			height: 40%;
+			top : 205%;
+			left:50px;
+		}
+	 .container h1{
+    font-size:30px;
+  }
+  .container label{
+    width:50%;
+  }
+  .clearfix .signupbtn button{
+    width:100%;
+    margin:0;
+    text-align:center;
+  }
+  .modal-content {
+  margin: auto ; /* 5% from the top, 15% from the bottom and centered */
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+.sec5 ul{
+			width : 50%;
+			margin-top: 50px;
+           
+            
+            flex-flow: nowrap;
+		}
+  .sec5 a{
+			margin-left:30px;
+            justify-content: center;
+            display:flex;
+		}	
+}
+		
+</style>
+<title>My front page</title>
+</head>																										<!--Putting Image as a background-->
+<body>
+<main class="main">
+	<section class="sec1">
+		<div align = "right" class="su">
+			<button onclick="document.getElementById('id01').style.display='block'">Sign In</button>
+		</div>
+		<div id="id01" class="modal">	
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<form class="modal-content" action="/action_page.php">
+			<div class="container">
+				<h1>Sign In</h1>
+				<label for="email"></label>
+				<input type="text" placeholder="Enter Email/Phone" name="email" required>
+				<label for="psw"></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+				<div class="clearfix">
+					<button type="submit" class="signupbtn">Sign In</button>
+				</div>
+				<label class="ll">
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+				</label>
+				<p class="ll">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+			</div>
+			</form>
+		</div>
+		<div class="heading">
+			<h1>NETFLIX</h1>
+		</div>
+		<div>
+			<div class="division">	
+				<h1>Unlimited movies, TV shows and more.</h1>
+				<p>
+					Watch anywhere and anytime.
+				</p>
+			</div>
+			<div class="back"></div>
+		</div>
+		<script>
+			// Get the modal
+			var modal = document.getElementById('id01');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			if (event.target == modal) {
+			modal.style.display = "none";
+			}
+		}
+		</script>
+	</section>
+	<section class="sec2">																				
+		<div>
+			<h2>Enjoy on Your TV anytime.</h2>
+			<img src="https://i.gifer.com/WfVA.gif" alt="netflix-on-tv">
+			<p>Watch your tv shows anywhere on TV,Laptop,
+			Phone,iPad and more anytime.</p>
+		</div>
+	</section>
+	<section class="sec3">
+		<div>
+			<img src="https://media.tenor.com/images/13b9d6a6595b97c2f741504abfaff568/tenor.gif" alt="downloading-shows">
+			<h2>Download your shows to watch offline.</h2>
+			<p>You can download your favourite TV shows and watch them offline</p>
+		</div>
+	</section>
+</main>
+<footer class="sec5">
+	<div>
+		<p> For any Doubts, Contact Us: 1800-00-00-91</p>
+		<ul>
+			<li><a href="#MAQ">MAQ's</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Netflix">About Us</a></li>
+			<li><a href="#">Help Center</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Speed Test</a></li>
+		</ul>
+	</div>
+</footer>
+</body>
+</html>
